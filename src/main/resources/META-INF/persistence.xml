@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="activeplan" transaction-type="RESOURCE_LOCAL">
+		<!-- <class>com.forone.activeplan.entity.Milestone</class> <class>com.forone.activeplan.entity.MilestonePK</class> 
+			<class>com.forone.activeplan.entity.Notification</class> <class>com.forone.activeplan.entity.PlanItem</class> 
+			<class>com.forone.activeplan.entity.PlanItemPK</class> <class>com.forone.activeplan.entity.Resource</class> 
+			<class>com.forone.activeplan.entity.ResourcePK</class> <class>com.forone.activeplan.entity.Tag</class> 
+			<class>com.forone.activeplan.entity.User</class> <class>com.forone.activeplan.entity.UserHasPlanItem</class> 
+			<class>com.forone.activeplan.entity.UserHasPlanItemPK</class> -->
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.forone.activeplan.entity.User</class>
+		<properties>
+			<property name="eclipselink.target-database" value="MySQL" />
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/active_plan"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+			<!-- 
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			 -->
+			<property name="eclipselink.logging.level" value="FINE" />
+		</properties>
+	</persistence-unit>
+</persistence>
